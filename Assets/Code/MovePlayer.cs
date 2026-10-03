@@ -9,6 +9,7 @@ public class MovePlayer : MonoBehaviour
     private Animator animator;
 
     [SerializeField] private float velocidad = 5f;
+    public bool enPiso = false;
 
     void Awake()
     {
@@ -59,7 +60,7 @@ public class MovePlayer : MonoBehaviour
     void OnDisable()
     {
         controlPlayer.Disable();
-        controlPlayer.Player.saltar.peformed -= OnSaltar;
+        controlPlayer.Player.saltar.performed -= OnSaltar;
     }
 
     private void OnSaltar(InputAction.CallbackContext context)
