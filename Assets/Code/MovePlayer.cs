@@ -54,13 +54,13 @@ public class MovePlayer : MonoBehaviour
     void OnEnable()
     {
         controlPlayer.Enable();
-        controlPlayer.Player.saltar.performed += OnSaltar;
+        controlPlayer.Player.Saltar.performed += OnSaltar;
     }
 
     void OnDisable()
     {
         controlPlayer.Disable();
-        controlPlayer.Player.saltar.performed -= OnSaltar;
+        controlPlayer.Player.Saltar.performed -= OnSaltar;
     }
 
     private void OnSaltar(InputAction.CallbackContext context)
